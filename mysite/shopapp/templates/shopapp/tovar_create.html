@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Создание товара{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Создание товара</h1>
+    </header>
+
+    <form action="/create/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>
+        <p>Все права защищены</p>
+    </footer>
+</body>
+</html>
